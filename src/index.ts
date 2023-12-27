@@ -2,7 +2,9 @@ import bodyParser from "body-parser";
 import express, { NextFunction, Request, Response } from "express";
 import http from "http";
 
-import "dotenv/config";
+import dotEnv from "dotenv";
+dotEnv.config();
+import "./data/db";
 import { PORT } from "./common/private-keys";
 import corsConfig from "./config/cors";
 import errorHandler from "./helpers/error-handler";
